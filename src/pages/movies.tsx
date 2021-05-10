@@ -23,8 +23,7 @@ export const Movies = () => {
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.Search);
-        setMovies(data.Search);
+        data.Search && setMovies(data.Search);
       });
   };
 
