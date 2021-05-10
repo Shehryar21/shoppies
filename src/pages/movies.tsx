@@ -19,7 +19,7 @@ export const Movies = () => {
   const [nominatedMovies, setNominatedMovies] = useState<Movie[]>([]);
 
   const onRequestSearchHandler = () => {
-    const apiUrl = `http://www.omdbapi.com/?s=${searchVal}&apikey=f939c0a3&type=movie`;
+    const apiUrl = `https://www.omdbapi.com/?s=${searchVal}&apikey=f939c0a3&type=movie`;
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
