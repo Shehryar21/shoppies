@@ -8,16 +8,14 @@ interface Movie {
     Poster: string;
   }
 
-const handleNominate = () => {
-    console.log()
-}
 
 export const MovieItem = (props: Movie) => {
     return (
         <div>
-            <img src={props.Poster}></img>
-            {props.Title} {props.Year}
-            <button onClick={handleNominate}>Nominate</button>
+        <img width="100px" height="100px" style={{padding: "20px"}} src={props.Poster}></img>
+        <div style={{paddingBottom: "10px"}} >
+            {props.Title} - {props.Year}
+        </div>
         </div>
     );
 }
